@@ -1,17 +1,31 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 using RaceDay.Api.Data;
+using RaceDay.Api.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Add services to the container.
+builder.Services.AddControllers();
+builder.Services.AddOpenApi();
+
+// Connect to the SQL Server database.
 builder.Services.AddDbContext<RaceDayDbContext>(options =>
     options.UseSqlServer(
         builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Add services to the container.
+// Enable session storage.
+builder.Services.AddDistributedMemoryCache();
 
-builder.Services.AddControllers();
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-builder.Services.AddOpenApi();
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
+
+// Configure password hashing.
+builder.Services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
 
 var app = builder.Build();
 
@@ -22,6 +36,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+// Enable sessions before mapping the controllers.
+app.UseSession();
 
 app.UseAuthorization();
 
