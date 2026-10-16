@@ -10,7 +10,7 @@ namespace RaceDay.Api.Models
         [Key]
         public int CategoryID { get; set; }
 
-        [Required]
+    [Required]
         public int EventID { get; set; }
 
         [Required]
@@ -29,4 +29,5 @@ namespace RaceDay.Api.Models
         public ICollection<Enrolment> Enrolments { get; set; }
             = new List<Enrolment>();
     }
+
 }

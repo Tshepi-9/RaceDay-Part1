@@ -1,23 +1,26 @@
-using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using RaceDay.Api.Data;
 using RaceDay.Api.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Register controllers.
 builder.Services.AddControllers();
+
+// Register Swagger for API documentation and testing.
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// Connect to the SQL Server database.
+// Configure the SQL Server database connection.
 builder.Services.AddDbContext<RaceDayDbContext>(options =>
-    options.UseSqlServer(
-        builder.Configuration.GetConnectionString("DefaultConnection")));
+options.UseSqlServer(
+builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Enable session storage.
+// Enable in-memory session storage.
 builder.Services.AddDistributedMemoryCache();
 
+// Configure session management.
 builder.Services.AddSession(options =>
 {
     options.IdleTimeout = TimeSpan.FromMinutes(30);
@@ -25,25 +28,29 @@ builder.Services.AddSession(options =>
     options.Cookie.IsEssential = true;
 });
 
-// Configure password hashing.
+// Register password hashing for user accounts.
 builder.Services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Configure Swagger during development.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
+// Redirect HTTP requests to HTTPS.
 app.UseHttpsRedirection();
 
-// Enable sessions before mapping the controllers.
+// Enable session management before the controllers run.
 app.UseSession();
 
+// Enable authorization.
 app.UseAuthorization();
 
+// Map controller endpoints.
 app.MapControllers();
 
+// Start the application.
 app.Run();
