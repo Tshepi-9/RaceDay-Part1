@@ -1,0 +1,87 @@
+﻿@model RaceDay.Mvc.ViewModels.CategoryViewModel
+
+@{
+    ViewData["Title"] = "Add Category";
+}
+
+<div class="container mt-4">
+
+    <h1>Add Category</h1>
+
+    <hr />
+
+    @if (ViewBag.Error != null)
+    {
+        <div class="alert alert-danger">
+            @ViewBag.Error
+        </div>
+    }
+
+    <form asp-action="Create" method="post">
+
+        <input type="hidden" asp-for="EventID" />
+
+        <div class="mb-3">
+            <label asp-for="CategoryName" class="form-label">
+                Category Name
+            </label>
+
+            <input asp-for="CategoryName" class="form-control" />
+
+            <span asp-validation-for="CategoryName"
+                  class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="MinimumAge" class="form-label">
+                Minimum Age
+            </label>
+
+            <input asp-for="MinimumAge"
+                   type="number"
+                   class="form-control" />
+
+            <span asp-validation-for="MinimumAge"
+                  class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="MaximumAge" class="form-label">
+                Maximum Age
+            </label>
+
+            <input asp-for="MaximumAge"
+                   type="number"
+                   class="form-control" />
+
+            <span asp-validation-for="MaximumAge"
+                  class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="CategoryDistance" class="form-label">
+                Category Distance (km)
+            </label>
+
+            <input asp-for="CategoryDistance"
+                   type="number"
+                   step="0.01"
+                   class="form-control" />
+
+            <span asp-validation-for="CategoryDistance"
+                  class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+            Save Category
+        </button>
+
+        <a asp-action="Index"
+           asp-route-eventId="@Model.EventID"
+           class="btn btn-secondary">
+            Cancel
+        </a>
+
+    </form>
+
+</div>

@@ -4,56 +4,71 @@
 
 <div class="container mt-4">
 
-    <h1 class="mb-3">Organiser Dashboard</h1>
+    <h1>Organiser Dashboard</h1>
 
-    <p class="text-muted">
-        Welcome to your RaceDay event management dashboard.
+    <p>
+        Welcome, @Context.Session.GetString("DisplayName").
+        Manage your RaceDay activities from here.
     </p>
 
-    <div class="row mt-4">
+    <hr />
 
+    <div class="row">
+
+        <!-- Manage Events -->
         <div class="col-md-4 mb-3">
-            <div class="card shadow-sm">
-                <div class="card-body">
-                    <h4>Manage Events</h4>
-                    <p>Create, update and manage your sporting events.</p>
-                    <a asp-controller="Organiser"
-                       asp-action="Events"
-                       class="btn btn-primary">
-                        View Events
-                    </a>
-                </div>
+            <div class="card p-3 h-100">
+                <h4>Manage Events</h4>
+                <p>Create, update, view and delete your running, walking and cycling events.</p>
+
+                <a asp-controller="ManageEvents"
+                   asp-action="Index"
+                   class="btn btn-primary">
+                    Manage Events
+                </a>
             </div>
         </div>
 
+        <!-- Enrolments -->
         <div class="col-md-4 mb-3">
-            <div class="card shadow-sm">
-                <div class="card-body">
-                    <h4>Enrolments</h4>
-                    <p>View participants who have entered your events.</p>
-                    <a asp-controller="Organiser"
-                       asp-action="Enrolments"
-                       class="btn btn-success">
-                        View Enrolments
-                    </a>
-                </div>
+            <div class="card p-3 h-100">
+                <h4>Enrolments</h4>
+                <p>View and manage participant enrolments.</p>
+
+                <a asp-controller="Organiser"
+                   asp-action="Enrolments"
+                   class="btn btn-primary">
+                    View Enrolments
+                </a>
             </div>
         </div>
 
+        <!-- Results -->
         <div class="col-md-4 mb-3">
-            <div class="card shadow-sm">
-                <div class="card-body">
-                    <h4>Results</h4>
-                    <p>Capture and manage participant results.</p>
-                    <a asp-controller="Organiser"
-                       asp-action="Results"
-                       class="btn btn-warning">
-                        Manage Results
-                    </a>
-                </div>
+            <div class="card p-3 h-100">
+                <h4>Results</h4>
+                <p>Manage participant results and event performance.</p>
+
+                <a asp-controller="Organiser"
+                   asp-action="Results"
+                   class="btn btn-primary">
+                    Manage Results
+                </a>
             </div>
         </div>
 
     </div>
+
+    <hr />
+
+    <form asp-controller="Auth"
+          asp-action="Logout"
+          method="post">
+
+        <button type="submit" class="btn btn-danger">
+            Logout
+        </button>
+
+    </form>
 
 </div>
