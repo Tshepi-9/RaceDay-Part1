@@ -14,14 +14,14 @@ namespace RaceDay.Mvc.Controllers
             _apiClient = apiClient;
         }
 
-        // GET: Login
+        // LOGIN PAGE
         [HttpGet]
         public IActionResult Login()
         {
             return View();
         }
 
-        // POST: Login
+        // PROCESS LOGIN
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Login(LoginVm model)
@@ -72,24 +72,31 @@ namespace RaceDay.Mvc.Controllers
                 return View(model);
             }
 
-            // Store logged-in user information in MVC session
+            // Store logged-in user information in MVC session.
             HttpContext.Session.SetString("UserId", userId);
             HttpContext.Session.SetString("Role", role);
+
             HttpContext.Session.SetString(
                 "DisplayName",
                 $"{firstName} {lastName}".Trim());
 
-            return RedirectToAction("Index", "Home");
+            // Redirect users according to their role.
+            if (role == "Organiser")
+            {
+                return RedirectToAction("Index", "Organiser");
+            }
+
+            return RedirectToAction("Index", "Participant");
         }
 
-        // GET: Register
+        // REGISTRATION PAGE
         [HttpGet]
         public IActionResult Register()
         {
             return View();
         }
 
-        // POST: Register
+        // PROCESS REGISTRATION
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Register(RegisterVm model)
@@ -131,7 +138,7 @@ namespace RaceDay.Mvc.Controllers
             return RedirectToAction("Login");
         }
 
-        // POST: Logout
+        // LOGOUT
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Logout()
@@ -144,13 +151,12 @@ namespace RaceDay.Mvc.Controllers
                     "api/auth/logout");
             }
 
-            // Clear MVC session
             HttpContext.Session.Clear();
 
             return RedirectToAction("Login");
         }
 
-        // Read a property from API JSON
+        // READ JSON PROPERTY
         private string GetProperty(
             JsonElement element,
             string propertyName)
@@ -163,7 +169,7 @@ namespace RaceDay.Mvc.Controllers
             return string.Empty;
         }
 
-        // Read an API error message
+        // READ API ERROR MESSAGE
         private string GetMessage(
             string responseText,
             string defaultMessage)
