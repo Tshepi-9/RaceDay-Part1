@@ -1,0 +1,109 @@
+﻿@model List<RaceDay.Mvc.ViewModels.CategoryViewModel>
+
+@{
+    ViewData["Title"] = "Manage Categories";
+}
+
+<div class="container mt-4">
+
+    <h1>Manage Categories</h1>
+
+    <h4>Event: @ViewBag.EventName</h4>
+
+    <hr />
+
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["Success"]
+        </div>
+    }
+
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger">
+            @TempData["Error"]
+        </div>
+    }
+
+    @if (ViewBag.Error != null)
+    {
+        <div class="alert alert-danger">
+            @ViewBag.Error
+        </div>
+    }
+
+    <a asp-action="Create"
+       asp-route-eventId="@ViewBag.EventId"
+       class="btn btn-primary mb-3">
+        Add Category
+    </a>
+
+    @if (Model.Count == 0)
+    {
+        <p>No categories have been added to this event yet.</p>
+    }
+    else
+    {
+        <table class="table table-bordered table-striped">
+
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Minimum Age</th>
+                    <th>Maximum Age</th>
+                    <th>Distance (km)</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var category in Model)
+                {
+                    <tr>
+                        <td>@category.CategoryName</td>
+                        <td>@(category.MinimumAge?.ToString() ?? "Not specified")</td>
+                        <td>@(category.MaximumAge?.ToString() ?? "Not specified")</td>
+                        <td>@(category.CategoryDistance?.ToString() ?? "Not specified")</td>
+
+                        <td>
+                            <a asp-action="Edit"
+                               asp-route-id="@category.CategoryID"
+                               asp-route-eventId="@category.EventID"
+                               class="btn btn-warning btn-sm">
+                                Edit
+                            </a>
+
+                            <form asp-action="Delete"
+                                  method="post"
+                                  style="display:inline">
+
+                                <input type="hidden"
+                                       name="id"
+                                       value="@category.CategoryID" />
+
+                                <input type="hidden"
+                                       name="eventId"
+                                       value="@category.EventID" />
+
+                                <button type="submit"
+                                        class="btn btn-danger btn-sm"
+                                        onclick="return confirm('Are you sure you want to delete this category?')">
+                                    Delete
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+    }
+
+    <a asp-controller="ManageEvents"
+       asp-action="Index"
+       class="btn btn-secondary">
+        Back to Events
+    </a>
+
+</div>
