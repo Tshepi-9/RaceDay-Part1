@@ -1,0 +1,418 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\TWINFLAME\\OneDrive\\Documents\\GitHub\\RaceDay.Api\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.Api\\RaceDay.Api.csproj|c:\\users\\twinflame\\onedrive\\documents\\github\\raceday.api\\raceday.api\\readme\\textfile.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.Api\\RaceDay.Api.csproj|solutionrelative:raceday.api\\readme\\textfile.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{983761EC-DBB9-7AFF-3533-4985E94A5E9C}|RaceDay.Api.Tests\\RaceDay.Api.Tests.csproj|c:\\users\\twinflame\\onedrive\\documents\\github\\raceday.api\\raceday.api.tests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{983761EC-DBB9-7AFF-3533-4985E94A5E9C}|RaceDay.Api.Tests\\RaceDay.Api.Tests.csproj|solutionrelative:raceday.api.tests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.Api\\RaceDay.Api.csproj|c:\\users\\twinflame\\onedrive\\documents\\github\\raceday.api\\raceday.api\\raceday.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.Api\\RaceDay.Api.csproj|solutionrelative:raceday.api\\raceday.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.Api\\RaceDay.Api.csproj|c:\\users\\twinflame\\onedrive\\documents\\github\\raceday.api\\raceday.api\\data\\racedaydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.Api\\RaceDay.Api.csproj|solutionrelative:raceday.api\\data\\racedaydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.Api\\RaceDay.Api.csproj|c:\\users\\twinflame\\onedrive\\documents\\github\\raceday.api\\raceday.api\\controllers\\resultscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.Api\\RaceDay.Api.csproj|solutionrelative:raceday.api\\controllers\\resultscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.Api\\RaceDay.Api.csproj|c:\\users\\twinflame\\onedrive\\documents\\github\\raceday.api\\raceday.api\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.Api\\RaceDay.Api.csproj|solutionrelative:raceday.api\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.Api\\RaceDay.Api.csproj|c:\\users\\twinflame\\onedrive\\documents\\github\\raceday.api\\raceday.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.Api\\RaceDay.Api.csproj|solutionrelative:raceday.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{983761EC-DBB9-7AFF-3533-4985E94A5E9C}|RaceDay.Api.Tests\\RaceDay.Api.Tests.csproj|c:\\users\\twinflame\\onedrive\\documents\\github\\raceday.api\\raceday.api.tests\\racedayapitests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{983761EC-DBB9-7AFF-3533-4985E94A5E9C}|RaceDay.Api.Tests\\RaceDay.Api.Tests.csproj|solutionrelative:raceday.api.tests\\racedayapitests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{983761EC-DBB9-7AFF-3533-4985E94A5E9C}|RaceDay.Api.Tests\\RaceDay.Api.Tests.csproj|c:\\users\\twinflame\\onedrive\\documents\\github\\raceday.api\\raceday.api.tests\\raceday.api.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{983761EC-DBB9-7AFF-3533-4985E94A5E9C}|RaceDay.Api.Tests\\RaceDay.Api.Tests.csproj|solutionrelative:raceday.api.tests\\raceday.api.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.Api\\RaceDay.Api.csproj|c:\\users\\twinflame\\onedrive\\documents\\github\\raceday.api\\raceday.api\\filters\\roleauthorizeatrribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.Api\\RaceDay.Api.csproj|solutionrelative:raceday.api\\filters\\roleauthorizeatrribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.Api\\RaceDay.Api.csproj|c:\\users\\twinflame\\onedrive\\documents\\github\\raceday.api\\raceday.api\\controllers\\enrolmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.Api\\RaceDay.Api.csproj|solutionrelative:raceday.api\\controllers\\enrolmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.Api\\RaceDay.Api.csproj|c:\\users\\twinflame\\onedrive\\documents\\github\\raceday.api\\raceday.api\\controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.Api\\RaceDay.Api.csproj|solutionrelative:raceday.api\\controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.Api\\RaceDay.Api.csproj|c:\\users\\twinflame\\onedrive\\documents\\github\\raceday.api\\raceday.api\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.Api\\RaceDay.Api.csproj|solutionrelative:raceday.api\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.Api\\RaceDay.Api.csproj|c:\\users\\twinflame\\onedrive\\documents\\github\\raceday.api\\raceday.api\\dtos\\apidtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.Api\\RaceDay.Api.csproj|solutionrelative:raceday.api\\dtos\\apidtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.Api\\RaceDay.Api.csproj|c:\\users\\twinflame\\onedrive\\documents\\github\\raceday.api\\raceday.api\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.Api\\RaceDay.Api.csproj|solutionrelative:raceday.api\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.Api\\RaceDay.Api.csproj|c:\\users\\twinflame\\onedrive\\documents\\github\\raceday.api\\raceday.api\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.Api\\RaceDay.Api.csproj|solutionrelative:raceday.api\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.Api\\RaceDay.Api.csproj|c:\\users\\twinflame\\onedrive\\documents\\github\\raceday.api\\raceday.api\\models\\route.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.Api\\RaceDay.Api.csproj|solutionrelative:raceday.api\\models\\route.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.Api\\RaceDay.Api.csproj|c:\\users\\twinflame\\onedrive\\documents\\github\\raceday.api\\raceday.api\\models\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.Api\\RaceDay.Api.csproj|solutionrelative:raceday.api\\models\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.Api\\RaceDay.Api.csproj|c:\\users\\twinflame\\onedrive\\documents\\github\\raceday.api\\raceday.api\\models\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.Api\\RaceDay.Api.csproj|solutionrelative:raceday.api\\models\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.Api\\RaceDay.Api.csproj|c:\\users\\twinflame\\onedrive\\documents\\github\\raceday.api\\raceday.api\\models\\enrolment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.Api\\RaceDay.Api.csproj|solutionrelative:raceday.api\\models\\enrolment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.Api\\RaceDay.Api.csproj|c:\\users\\twinflame\\onedrive\\documents\\github\\raceday.api\\raceday.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.Api\\RaceDay.Api.csproj|solutionrelative:raceday.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.Api\\RaceDay.Api.csproj|c:\\users\\twinflame\\onedrive\\documents\\github\\raceday.api\\raceday.api\\migrations\\20261016112800_initialracedaydatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.Api\\RaceDay.Api.csproj|solutionrelative:raceday.api\\migrations\\20261016112800_initialracedaydatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.Api\\RaceDay.Api.csproj|c:\\users\\twinflame\\onedrive\\documents\\github\\raceday.api\\raceday.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.Api\\RaceDay.Api.csproj|solutionrelative:raceday.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC7E3505-1E1B-4AAA-A4A0-399CDE94E365}|RaceDay.Contracts\\RaceDay.Contracts.csproj|c:\\users\\twinflame\\onedrive\\documents\\github\\raceday.api\\raceday.contracts\\dtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC7E3505-1E1B-4AAA-A4A0-399CDE94E365}|RaceDay.Contracts\\RaceDay.Contracts.csproj|solutionrelative:raceday.contracts\\dtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TextFile.txt",
+              "DocumentMoniker": "C:\\Users\\TWINFLAME\\OneDrive\\Documents\\GitHub\\RaceDay.Api\\RaceDay.Api\\README\\TextFile.txt",
+              "RelativeDocumentMoniker": "RaceDay.Api\\README\\TextFile.txt",
+              "ToolTip": "C:\\Users\\TWINFLAME\\OneDrive\\Documents\\GitHub\\RaceDay.Api\\RaceDay.Api\\README\\TextFile.txt",
+              "RelativeToolTip": "RaceDay.Api\\README\\TextFile.txt",
+              "ViewState": "AgIAAJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2026-10-16T23:27:42.773Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ResultsController.cs",
+              "DocumentMoniker": "C:\\Users\\TWINFLAME\\OneDrive\\Documents\\GitHub\\RaceDay.Api\\RaceDay.Api\\Controllers\\ResultsController.cs",
+              "RelativeDocumentMoniker": "RaceDay.Api\\Controllers\\ResultsController.cs",
+              "ToolTip": "C:\\Users\\TWINFLAME\\OneDrive\\Documents\\GitHub\\RaceDay.Api\\RaceDay.Api\\Controllers\\ResultsController.cs",
+              "RelativeToolTip": "RaceDay.Api\\Controllers\\ResultsController.cs",
+              "ViewState": "AgIAAHcAAAAAAAAAAAAIwJsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-16T21:37:59.901Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RaceDayDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\TWINFLAME\\OneDrive\\Documents\\GitHub\\RaceDay.Api\\RaceDay.Api\\Data\\RaceDayDbContext.cs",
+              "RelativeDocumentMoniker": "RaceDay.Api\\Data\\RaceDayDbContext.cs",
+              "ToolTip": "C:\\Users\\TWINFLAME\\OneDrive\\Documents\\GitHub\\RaceDay.Api\\RaceDay.Api\\Data\\RaceDayDbContext.cs",
+              "RelativeToolTip": "RaceDay.Api\\Data\\RaceDayDbContext.cs",
+              "ViewState": "AgIAAL0AAAAAAAAAAAAAAL0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-16T10:45:21.941Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RaceDay.Api.csproj",
+              "DocumentMoniker": "C:\\Users\\TWINFLAME\\OneDrive\\Documents\\GitHub\\RaceDay.Api\\RaceDay.Api\\RaceDay.Api.csproj",
+              "RelativeDocumentMoniker": "RaceDay.Api\\RaceDay.Api.csproj",
+              "ToolTip": "C:\\Users\\TWINFLAME\\OneDrive\\Documents\\GitHub\\RaceDay.Api\\RaceDay.Api\\RaceDay.Api.csproj",
+              "RelativeToolTip": "RaceDay.Api\\RaceDay.Api.csproj",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAwwBkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-10-16T10:22:28.877Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "C:\\Users\\TWINFLAME\\OneDrive\\Documents\\GitHub\\RaceDay.Api\\RaceDay.Api.Tests\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "RaceDay.Api.Tests\\UnitTest1.cs",
+              "ToolTip": "C:\\Users\\TWINFLAME\\OneDrive\\Documents\\GitHub\\RaceDay.Api\\RaceDay.Api.Tests\\UnitTest1.cs",
+              "RelativeToolTip": "RaceDay.Api.Tests\\UnitTest1.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAA1wAwAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-16T10:21:20.884Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CategoriesController.cs",
+              "DocumentMoniker": "C:\\Users\\TWINFLAME\\OneDrive\\Documents\\GitHub\\RaceDay.Api\\RaceDay.Api\\Controllers\\CategoriesController.cs",
+              "RelativeDocumentMoniker": "RaceDay.Api\\Controllers\\CategoriesController.cs",
+              "ToolTip": "C:\\Users\\TWINFLAME\\OneDrive\\Documents\\GitHub\\RaceDay.Api\\RaceDay.Api\\Controllers\\CategoriesController.cs",
+              "RelativeToolTip": "RaceDay.Api\\Controllers\\CategoriesController.cs",
+              "ViewState": "AgIAAGgAAAAAAAAAAAAIwNYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-16T21:36:12.721Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\TWINFLAME\\OneDrive\\Documents\\GitHub\\RaceDay.Api\\RaceDay.Api\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "RaceDay.Api\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\TWINFLAME\\OneDrive\\Documents\\GitHub\\RaceDay.Api\\RaceDay.Api\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "RaceDay.Api\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAHkAAAAAAAAAAAAcwAMAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-16T11:45:36.862Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "RaceDayApiTests.cs",
+              "DocumentMoniker": "C:\\Users\\TWINFLAME\\OneDrive\\Documents\\GitHub\\RaceDay.Api\\RaceDay.Api.Tests\\RaceDayApiTests.cs",
+              "RelativeDocumentMoniker": "RaceDay.Api.Tests\\RaceDayApiTests.cs",
+              "ToolTip": "C:\\Users\\TWINFLAME\\OneDrive\\Documents\\GitHub\\RaceDay.Api\\RaceDay.Api.Tests\\RaceDayApiTests.cs",
+              "RelativeToolTip": "RaceDay.Api.Tests\\RaceDayApiTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-16T22:21:17.656Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RaceDay.Api.Tests.csproj",
+              "DocumentMoniker": "C:\\Users\\TWINFLAME\\OneDrive\\Documents\\GitHub\\RaceDay.Api\\RaceDay.Api.Tests\\RaceDay.Api.Tests.csproj",
+              "RelativeDocumentMoniker": "RaceDay.Api.Tests\\RaceDay.Api.Tests.csproj",
+              "ToolTip": "C:\\Users\\TWINFLAME\\OneDrive\\Documents\\GitHub\\RaceDay.Api\\RaceDay.Api.Tests\\RaceDay.Api.Tests.csproj",
+              "RelativeToolTip": "RaceDay.Api.Tests\\RaceDay.Api.Tests.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-10-16T10:26:44.706Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "RoleAuthorizeAtrribute.cs",
+              "DocumentMoniker": "C:\\Users\\TWINFLAME\\OneDrive\\Documents\\GitHub\\RaceDay.Api\\RaceDay.Api\\Filters\\RoleAuthorizeAtrribute.cs",
+              "RelativeDocumentMoniker": "RaceDay.Api\\Filters\\RoleAuthorizeAtrribute.cs",
+              "ToolTip": "C:\\Users\\TWINFLAME\\OneDrive\\Documents\\GitHub\\RaceDay.Api\\RaceDay.Api\\Filters\\RoleAuthorizeAtrribute.cs",
+              "RelativeToolTip": "RaceDay.Api\\Filters\\RoleAuthorizeAtrribute.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-16T12:20:12.441Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ProfileController.cs",
+              "DocumentMoniker": "C:\\Users\\TWINFLAME\\OneDrive\\Documents\\GitHub\\RaceDay.Api\\RaceDay.Api\\Controllers\\ProfileController.cs",
+              "RelativeDocumentMoniker": "RaceDay.Api\\Controllers\\ProfileController.cs",
+              "ToolTip": "C:\\Users\\TWINFLAME\\OneDrive\\Documents\\GitHub\\RaceDay.Api\\RaceDay.Api\\Controllers\\ProfileController.cs",
+              "RelativeToolTip": "RaceDay.Api\\Controllers\\ProfileController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-16T21:31:16.234Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ApiDtos.cs",
+              "DocumentMoniker": "C:\\Users\\TWINFLAME\\OneDrive\\Documents\\GitHub\\RaceDay.Api\\RaceDay.Api\\DTOs\\ApiDtos.cs",
+              "RelativeDocumentMoniker": "RaceDay.Api\\DTOs\\ApiDtos.cs",
+              "ToolTip": "C:\\Users\\TWINFLAME\\OneDrive\\Documents\\GitHub\\RaceDay.Api\\RaceDay.Api\\DTOs\\ApiDtos.cs",
+              "RelativeToolTip": "RaceDay.Api\\DTOs\\ApiDtos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-16T21:27:14.268Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\Users\\TWINFLAME\\OneDrive\\Documents\\GitHub\\RaceDay.Api\\RaceDay.Api\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "RaceDay.Api\\Models\\Category.cs",
+              "ToolTip": "C:\\Users\\TWINFLAME\\OneDrive\\Documents\\GitHub\\RaceDay.Api\\RaceDay.Api\\Models\\Category.cs",
+              "RelativeToolTip": "RaceDay.Api\\Models\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-16T10:34:59.299Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Route.cs",
+              "DocumentMoniker": "C:\\Users\\TWINFLAME\\OneDrive\\Documents\\GitHub\\RaceDay.Api\\RaceDay.Api\\Models\\Route.cs",
+              "RelativeDocumentMoniker": "RaceDay.Api\\Models\\Route.cs",
+              "ToolTip": "C:\\Users\\TWINFLAME\\OneDrive\\Documents\\GitHub\\RaceDay.Api\\RaceDay.Api\\Models\\Route.cs",
+              "RelativeToolTip": "RaceDay.Api\\Models\\Route.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAACEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-16T10:33:24.09Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "EnrolmentsController.cs",
+              "DocumentMoniker": "C:\\Users\\TWINFLAME\\OneDrive\\Documents\\GitHub\\RaceDay.Api\\RaceDay.Api\\Controllers\\EnrolmentsController.cs",
+              "RelativeDocumentMoniker": "RaceDay.Api\\Controllers\\EnrolmentsController.cs",
+              "ToolTip": "C:\\Users\\TWINFLAME\\OneDrive\\Documents\\GitHub\\RaceDay.Api\\RaceDay.Api\\Controllers\\EnrolmentsController.cs",
+              "RelativeToolTip": "RaceDay.Api\\Controllers\\EnrolmentsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAMIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-16T12:53:53.384Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Result.cs",
+              "DocumentMoniker": "C:\\Users\\TWINFLAME\\OneDrive\\Documents\\GitHub\\RaceDay.Api\\RaceDay.Api\\Models\\Result.cs",
+              "RelativeDocumentMoniker": "RaceDay.Api\\Models\\Result.cs",
+              "ToolTip": "C:\\Users\\TWINFLAME\\OneDrive\\Documents\\GitHub\\RaceDay.Api\\RaceDay.Api\\Models\\Result.cs",
+              "RelativeToolTip": "RaceDay.Api\\Models\\Result.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-16T10:36:22.294Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Event.cs",
+              "DocumentMoniker": "C:\\Users\\TWINFLAME\\OneDrive\\Documents\\GitHub\\RaceDay.Api\\RaceDay.Api\\Models\\Event.cs",
+              "RelativeDocumentMoniker": "RaceDay.Api\\Models\\Event.cs",
+              "ToolTip": "C:\\Users\\TWINFLAME\\OneDrive\\Documents\\GitHub\\RaceDay.Api\\RaceDay.Api\\Models\\Event.cs",
+              "RelativeToolTip": "RaceDay.Api\\Models\\Event.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAADQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-16T10:34:07.185Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "EventsController.cs",
+              "DocumentMoniker": "C:\\Users\\TWINFLAME\\OneDrive\\Documents\\GitHub\\RaceDay.Api\\RaceDay.Api\\Controllers\\EventsController.cs",
+              "RelativeDocumentMoniker": "RaceDay.Api\\Controllers\\EventsController.cs",
+              "ToolTip": "C:\\Users\\TWINFLAME\\OneDrive\\Documents\\GitHub\\RaceDay.Api\\RaceDay.Api\\Controllers\\EventsController.cs",
+              "RelativeToolTip": "RaceDay.Api\\Controllers\\EventsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-16T12:44:34.901Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Enrolment.cs",
+              "DocumentMoniker": "C:\\Users\\TWINFLAME\\OneDrive\\Documents\\GitHub\\RaceDay.Api\\RaceDay.Api\\Models\\Enrolment.cs",
+              "RelativeDocumentMoniker": "RaceDay.Api\\Models\\Enrolment.cs",
+              "ToolTip": "C:\\Users\\TWINFLAME\\OneDrive\\Documents\\GitHub\\RaceDay.Api\\RaceDay.Api\\Models\\Enrolment.cs",
+              "RelativeToolTip": "RaceDay.Api\\Models\\Enrolment.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAAACQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-16T10:35:34.731Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\TWINFLAME\\OneDrive\\Documents\\GitHub\\RaceDay.Api\\RaceDay.Api\\Models\\User.cs",
+              "RelativeDocumentMoniker": "RaceDay.Api\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\TWINFLAME\\OneDrive\\Documents\\GitHub\\RaceDay.Api\\RaceDay.Api\\Models\\User.cs",
+              "RelativeToolTip": "RaceDay.Api\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-16T10:32:22.519Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\TWINFLAME\\OneDrive\\Documents\\GitHub\\RaceDay.Api\\RaceDay.Api\\appsettings.json",
+              "RelativeDocumentMoniker": "RaceDay.Api\\appsettings.json",
+              "ToolTip": "C:\\Users\\TWINFLAME\\OneDrive\\Documents\\GitHub\\RaceDay.Api\\RaceDay.Api\\appsettings.json",
+              "RelativeToolTip": "RaceDay.Api\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-10-16T11:03:00.047Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "20261016112800_InitialRaceDayDatabase.cs",
+              "DocumentMoniker": "C:\\Users\\TWINFLAME\\OneDrive\\Documents\\GitHub\\RaceDay.Api\\RaceDay.Api\\Migrations\\20261016112800_InitialRaceDayDatabase.cs",
+              "RelativeDocumentMoniker": "RaceDay.Api\\Migrations\\20261016112800_InitialRaceDayDatabase.cs",
+              "ToolTip": "C:\\Users\\TWINFLAME\\OneDrive\\Documents\\GitHub\\RaceDay.Api\\RaceDay.Api\\Migrations\\20261016112800_InitialRaceDayDatabase.cs",
+              "RelativeToolTip": "RaceDay.Api\\Migrations\\20261016112800_InitialRaceDayDatabase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-16T11:28:01.001Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\TWINFLAME\\OneDrive\\Documents\\GitHub\\RaceDay.Api\\RaceDay.Api\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "RaceDay.Api\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\TWINFLAME\\OneDrive\\Documents\\GitHub\\RaceDay.Api\\RaceDay.Api\\appsettings.Development.json",
+              "RelativeToolTip": "RaceDay.Api\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-10-16T11:03:48.278Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Dtos.cs",
+              "DocumentMoniker": "C:\\Users\\TWINFLAME\\OneDrive\\Documents\\GitHub\\RaceDay.Api\\RaceDay.Contracts\\Dtos.cs",
+              "RelativeDocumentMoniker": "RaceDay.Contracts\\Dtos.cs",
+              "ToolTip": "C:\\Users\\TWINFLAME\\OneDrive\\Documents\\GitHub\\RaceDay.Api\\RaceDay.Contracts\\Dtos.cs",
+              "RelativeToolTip": "RaceDay.Contracts\\Dtos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4BAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-16T10:21:43.241Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

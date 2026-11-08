@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "gthdKgjAEew=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\TWINFLAME\\OneDrive\\Documents\\GitHub\\RaceDay.Api\\RaceDay.Contracts\\RaceDay.Contracts.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\TWINFLAME\\.nuget\\packages\\system.security.cryptography.pkcs\\10.0.13\\system.security.cryptography.pkcs.10.0.13.nupkg.sha512"
+  ],
+  "logs": []
+}
