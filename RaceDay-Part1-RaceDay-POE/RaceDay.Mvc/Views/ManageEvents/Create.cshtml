@@ -5,11 +5,23 @@
 }
 
 <div class="container mt-4">
-    <h2>Create New Event</h2>
+
+    <h1>Create New Event</h1>
+
+    <p>Enter the details of your event below.</p>
+
+    <hr />
+
+    @if (ViewBag.Error != null)
+    {
+        <div class="alert alert-danger">
+            @ViewBag.Error
+        </div>
+    }
+
+    <div asp-validation-summary="All" class="alert alert-danger"></div>
 
     <form asp-action="Create" method="post">
-
-        <div asp-validation-summary="All" class="text-danger"></div>
 
         <div class="mb-3">
             <label asp-for="EventName" class="form-label">Event Name</label>
@@ -43,24 +55,31 @@
 
         <div class="mb-3">
             <label asp-for="EventType" class="form-label">Event Type</label>
+
             <select asp-for="EventType" class="form-select">
+                <option value="">Select Event Type</option>
                 <option value="Run">Run</option>
                 <option value="Walk">Walk</option>
                 <option value="Cycle">Cycle</option>
             </select>
+
+            <span asp-validation-for="EventType" class="text-danger"></span>
         </div>
 
-        <div class="mb-3">
-            <label asp-for="RouteID" class="form-label">Route ID (Optional)</label>
-            <input asp-for="RouteID" type="number" class="form-control" />
-        </div>
+        <button type="submit" class="btn btn-primary">
+            Create Event
+        </button>
 
-        <button type="submit" class="btn btn-success">Create Event</button>
+        <a asp-action="Index" class="btn btn-secondary">
+            Cancel
+        </a>
 
-        <a asp-action="Index" class="btn btn-secondary">Cancel</a>
     </form>
+
 </div>
 
 @section Scripts {
-    <partial name="_ValidationScriptsPartial" />
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

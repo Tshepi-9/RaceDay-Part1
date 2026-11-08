@@ -1,0 +1,151 @@
+﻿@model List<RaceDay.Mvc.ViewModels.EnrolmentViewModel>
+
+@{
+    ViewData["Title"] = "Manage Enrolments";
+}
+
+<div class="container mt-4">
+
+    <h1>Manage Enrolments</h1>
+
+    <h5>Event: @ViewBag.EventName</h5>
+
+    <hr />
+
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["Success"]
+        </div>
+    }
+
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger">
+            @TempData["Error"]
+        </div>
+    }
+
+    @if (ViewBag.Error != null)
+    {
+        <div class="alert alert-danger">
+            @ViewBag.Error
+        </div>
+    }
+
+    @if (Model == null || Model.Count == 0)
+    {
+        <div class="alert alert-info">
+            No Participants have enrolled in this event yet.
+        </div>
+    }
+    else
+    {
+        <div class="table-responsive">
+
+            <table class="table table-bordered table-striped">
+
+                <thead>
+                    <tr>
+                        <th>Participant</th>
+                        <th>Category</th>
+                        <th>Enrolment Date</th>
+                        <th>Status</th>
+                        <th>Update Status</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.ParticipantName</td>
+
+                            <td>@item.CategoryName</td>
+
+                            <td>
+                                @item.EnrolmentDate.ToString("dd/MM/yyyy")
+                            </td>
+
+                            <td>
+                                @if (item.Status == "Confirmed")
+                                {
+                                    <span class="badge bg-success">
+                                        Confirmed
+                                    </span>
+                                }
+                                else if (item.Status == "Pending")
+                                {
+                                    <span class="badge bg-warning text-dark">
+                                        Pending
+                                    </span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-secondary">
+                                        @item.Status
+                                    </span>
+                                }
+                            </td>
+
+                            <td>
+                                <form asp-action="UpdateStatus"
+                                      method="post">
+
+                                    @Html.AntiForgeryToken()
+
+                                    <input type="hidden"
+                                           name="id"
+                                           value="@item.EnrolmentID" />
+
+                                    <input type="hidden"
+                                           name="eventId"
+                                           value="@item.EventID" />
+
+                                    <select name="status"
+                                            class="form-select form-select-sm mb-2">
+
+                                        <option value="Pending"
+                                            selected="@(item.Status == "Pending")">
+                                            Pending
+                                        </option>
+
+                                        <option value="Confirmed"
+                                            selected="@(item.Status == "Confirmed")">
+                                            Confirmed
+                                        </option>
+
+                                        <option value="Cancelled"
+                                            selected="@(item.Status == "Cancelled")">
+                                            Cancelled
+                                        </option>
+
+                                    </select>
+
+                                    <button type="submit"
+                                            class="btn btn-primary btn-sm">
+                                        Update
+                                    </button>
+
+                                </form>
+                            </td>
+                        </tr>
+                    }
+
+                </tbody>
+
+            </table>
+
+        </div>
+    }
+
+    <hr />
+
+    <a asp-controller="ManageEvents"
+       asp-action="Index"
+       class="btn btn-secondary">
+        Back to Events
+    </a>
+
+</div>

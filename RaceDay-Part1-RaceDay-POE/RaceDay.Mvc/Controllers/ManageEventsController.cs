@@ -21,17 +21,22 @@ namespace RaceDay.Mvc.Controllers
                     HttpContext.Session.GetString("UserId"));
         }
 
+        // DISPLAY EVENTS
         public async Task<IActionResult> Index()
         {
             if (!IsOrganiser())
                 return RedirectToAction("Login", "Auth");
 
             var response = await _apiClient.SendAsync(
-                HttpMethod.Get, "api/events/mine");
+                HttpMethod.Get,
+                "api/events/mine");
 
             if (!response.IsSuccessStatusCode)
             {
-                ViewBag.Error = "Could not load your events.";
+                ViewBag.Error =
+                    "Could not load events: " +
+                    await response.Content.ReadAsStringAsync();
+
                 return View(new List<EventViewModel>());
             }
 
@@ -41,6 +46,7 @@ namespace RaceDay.Mvc.Controllers
             return View(events ?? new List<EventViewModel>());
         }
 
+        // DISPLAY CREATE FORM
         [HttpGet]
         public IActionResult Create()
         {
@@ -50,6 +56,7 @@ namespace RaceDay.Mvc.Controllers
             return View(new EventViewModel());
         }
 
+        // CREATE EVENT
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(EventViewModel model)
@@ -58,24 +65,46 @@ namespace RaceDay.Mvc.Controllers
                 return RedirectToAction("Login", "Auth");
 
             if (!ModelState.IsValid)
+            {
+                ViewBag.Error =
+                    "Please correct the validation errors below.";
+
                 return View(model);
+            }
+
+            var eventData = new
+            {
+                EventName = model.EventName,
+                Description = model.Description,
+                EventDate = model.EventDate,
+                Location = model.Location,
+                Distance = model.Distance,
+                EventType = model.EventType,
+                RouteID = model.RouteID
+            };
 
             var response = await _apiClient.SendAsync(
                 HttpMethod.Post,
                 "api/events",
-                model);
+                eventData);
+
+            var responseText =
+                await response.Content.ReadAsStringAsync();
 
             if (!response.IsSuccessStatusCode)
             {
-                ViewBag.Error = await response.Content.ReadAsStringAsync();
+                ViewBag.Error =
+                    $"API Error ({(int)response.StatusCode}): {responseText}";
+
                 return View(model);
             }
 
-            TempData["Success"] = "Event created successfully.";
+            TempData["Success"] = "Event created successfully!";
 
             return RedirectToAction(nameof(Index));
         }
 
+        // DISPLAY EDIT FORM
         [HttpGet]
         public async Task<IActionResult> Edit(int id)
         {
@@ -83,7 +112,8 @@ namespace RaceDay.Mvc.Controllers
                 return RedirectToAction("Login", "Auth");
 
             var response = await _apiClient.SendAsync(
-                HttpMethod.Get, $"api/events/{id}");
+                HttpMethod.Get,
+                $"api/events/{id}");
 
             if (!response.IsSuccessStatusCode)
                 return RedirectToAction(nameof(Index));
@@ -97,9 +127,12 @@ namespace RaceDay.Mvc.Controllers
             return View(eventItem);
         }
 
+        // UPDATE EVENT
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, EventViewModel model)
+        public async Task<IActionResult> Edit(
+            int id,
+            EventViewModel model)
         {
             if (!IsOrganiser())
                 return RedirectToAction("Login", "Auth");
@@ -112,17 +145,23 @@ namespace RaceDay.Mvc.Controllers
                 $"api/events/{id}",
                 model);
 
+            var responseText =
+                await response.Content.ReadAsStringAsync();
+
             if (!response.IsSuccessStatusCode)
             {
-                ViewBag.Error = await response.Content.ReadAsStringAsync();
+                ViewBag.Error =
+                    $"API Error ({(int)response.StatusCode}): {responseText}";
+
                 return View(model);
             }
 
-            TempData["Success"] = "Event updated successfully.";
+            TempData["Success"] = "Event updated successfully!";
 
             return RedirectToAction(nameof(Index));
         }
 
+        // DELETE EVENT
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Delete(int id)
@@ -131,13 +170,18 @@ namespace RaceDay.Mvc.Controllers
                 return RedirectToAction("Login", "Auth");
 
             var response = await _apiClient.SendAsync(
-                HttpMethod.Delete, $"api/events/{id}");
+                HttpMethod.Delete,
+                $"api/events/{id}");
 
             if (response.IsSuccessStatusCode)
-                TempData["Success"] = "Event deleted successfully.";
+            {
+                TempData["Success"] = "Event deleted successfully!";
+            }
             else
+            {
                 TempData["Error"] =
                     await response.Content.ReadAsStringAsync();
+            }
 
             return RedirectToAction(nameof(Index));
         }
