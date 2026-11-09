@@ -22,36 +22,26 @@ namespace RaceDay.Mvc.Services
             _httpContextAccessor = httpContextAccessor;
         }
 
-        // Send requests to the API
-        public async Task<HttpResponseMessage> SendAsync(
-            HttpMethod method,
-            string endpoint,
-            object? body = null)
+        private void AddApiCookie(HttpRequestMessage request)
         {
-            var request = new HttpRequestMessage(method, endpoint);
-
             var context = _httpContextAccessor.HttpContext;
 
-            // Forward the API session cookie
-            var apiCookie = context?.Session.GetString("ApiSessionCookie");
+            var apiCookie =
+                context?.Session.GetString("ApiSessionCookie");
 
             if (!string.IsNullOrEmpty(apiCookie))
             {
                 request.Headers.TryAddWithoutValidation(
-                    "Cookie",
-                    apiCookie);
+                    "Cookie", apiCookie);
             }
+        }
 
-            // Attach request body when supplied
-            if (body != null)
-            {
-                request.Content = JsonContent.Create(body);
-            }
+        private void SaveApiCookie(HttpResponseMessage response)
+        {
+            var context = _httpContextAccessor.HttpContext;
 
-            var response = await _httpClient.SendAsync(request);
-
-            // Capture the API session cookie after login
-            if (response.Headers.TryGetValues("Set-Cookie", out var cookies))
+            if (response.Headers.TryGetValues(
+                "Set-Cookie", out var cookies))
             {
                 foreach (var cookie in cookies)
                 {
@@ -61,26 +51,81 @@ namespace RaceDay.Mvc.Services
                         ".AspNetCore.Session=",
                         StringComparison.OrdinalIgnoreCase))
                     {
-                        var cookieValue = cookiePair.Split('=', 2)[1];
+                        var cookieValue =
+                            cookiePair.Split('=', 2)[1];
 
                         if (string.IsNullOrEmpty(cookieValue))
                         {
-                            context?.Session.Remove("ApiSessionCookie");
+                            context?.Session.Remove(
+                                "ApiSessionCookie");
                         }
                         else
                         {
                             context?.Session.SetString(
-                                "ApiSessionCookie",
-                                cookiePair);
+                                "ApiSessionCookie", cookiePair);
                         }
                     }
                 }
             }
+        }
+
+        // Send normal JSON requests.
+        public async Task<HttpResponseMessage> SendAsync(
+            HttpMethod method,
+            string endpoint,
+            object? body = null)
+        {
+            var request =
+                new HttpRequestMessage(method, endpoint);
+
+            AddApiCookie(request);
+
+            if (body != null)
+            {
+                request.Content = JsonContent.Create(body);
+            }
+
+            var response =
+                await _httpClient.SendAsync(request);
+
+            SaveApiCookie(response);
 
             return response;
         }
 
-        // Read API responses
+        // Send image files using multipart/form-data.
+        public async Task<HttpResponseMessage> SendFileAsync(
+            string endpoint,
+            IFormFile file)
+        {
+            using var content = new MultipartFormDataContent();
+
+            using var stream = file.OpenReadStream();
+
+            var fileContent = new StreamContent(stream);
+
+            fileContent.Headers.ContentType =
+                new System.Net.Http.Headers.MediaTypeHeaderValue(
+                    file.ContentType);
+
+            content.Add(fileContent, "file", file.FileName);
+
+            using var request =
+                new HttpRequestMessage(HttpMethod.Post, endpoint);
+
+            AddApiCookie(request);
+
+            request.Content = content;
+
+            var response =
+                await _httpClient.SendAsync(request);
+
+            SaveApiCookie(response);
+
+            return response;
+        }
+
+        // Read JSON responses.
         public async Task<T?> ReadAsync<T>(
             HttpResponseMessage response)
         {
