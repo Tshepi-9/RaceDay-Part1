@@ -1,0 +1,81 @@
+﻿@model List<RaceDay.Mvc.ViewModels.ResultViewModel>
+
+@{
+    ViewData["Title"] = "My Results";
+}
+
+<div class="container mt-4">
+
+    <h2 class="mb-3">My Results</h2>
+
+    <p class="text-muted">
+        View your recorded event results and finishing positions.
+    </p>
+
+    @if (ViewBag.Error != null)
+    {
+        <div class="alert alert-danger">
+            @ViewBag.Error
+        </div>
+    }
+
+    @if (Model == null || !Model.Any())
+    {
+        <div class="alert alert-info">
+            No results have been recorded for your events yet.
+        </div>
+    }
+    else
+    {
+        <div class="table-responsive">
+
+            <table class="table table-bordered table-striped">
+
+                <thead class="table-dark">
+                    <tr>
+                        <th>Event Name</th>
+                        <th>Finishing Time</th>
+                        <th>Finishing Position</th>
+                        <th>Date Recorded</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.EventName</td>
+
+                            <td>
+                                @(item.FinishTime.HasValue
+                                    ? item.FinishTime.Value.ToString(@"hh\:mm\:ss")
+                                    : "Not recorded")
+                            </td>
+
+                            <td>
+                                @(item.FinishingPosition.HasValue
+                                    ? item.FinishingPosition.ToString()
+                                    : "Not recorded")
+                            </td>
+
+                            <td>
+                                @item.RecordedAt.ToString("dd MMMM yyyy")
+                            </td>
+                        </tr>
+                    }
+
+                </tbody>
+
+            </table>
+
+        </div>
+    }
+
+    <a asp-controller="Participant"
+       asp-action="Index"
+       class="btn btn-secondary">
+        Back to Dashboard
+    </a>
+
+</div>
