@@ -250,7 +250,7 @@ The workflow runs when changes are pushed to the `RaceDay-Part3` branch or when 
 
 **Repository:**
 
-https://github.com/Tshepi-9/RaceDay-Part1
+https://github.com/Tshepi-9/RaceDay-Part1/tree/RaceDay.POE.ST10491732/RaceDay-Part1-RaceDay-POE 
 
 **Development branch:**
 
@@ -262,10 +262,10 @@ GitHub is used to maintain the project's source code, track changes and manage d
 
 Screenshots and a demonstration video will be included to show the completed system.
 Screenshot of the CI workflow: 
+ <img width="1357" height="639" alt="Screenshot 2026-11-09 192134" src="https://github.com/user-attachments/assets/61dfd077-c510-48de-9881-939ffe2ff571" />
+
 
 The demonstration covers:
-
-
 - Registration and login.
 - Organiser dashboard.
 - Event management.
@@ -279,6 +279,8 @@ The demonstration covers:
 - Azure Blob Storage integration.
 - Docker image creation and container execution.
 - GitHub Actions CI/CD workflow.
+
+The YouTube Video: https://youtu.be/cnEl58Z7yA4?si=74yx-wiMsCsFRSG1 
 
 ## 13. Conclusion
 
