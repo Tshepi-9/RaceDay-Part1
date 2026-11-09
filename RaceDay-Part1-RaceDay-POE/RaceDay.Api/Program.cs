@@ -2,22 +2,23 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using RaceDay.Api.Data;
 using RaceDay.Api.Models;
+using RaceDay.Api.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Register controllers.
 builder.Services.AddControllers();
 
-// Register Swagger for API documentation and testing.
+// Register Swagger.
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// Configure the SQL Server database connection.
+// Configure SQL Server database connection.
 builder.Services.AddDbContext<RaceDayDbContext>(options =>
-options.UseSqlServer(
-builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseSqlServer(
+        builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Enable in-memory session storage.
+// Enable session storage.
 builder.Services.AddDistributedMemoryCache();
 
 // Configure session management.
@@ -28,8 +29,11 @@ builder.Services.AddSession(options =>
     options.Cookie.IsEssential = true;
 });
 
-// Register password hashing for user accounts.
+// Register password hashing.
 builder.Services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
+
+// Register Azure Blob Storage service.
+builder.Services.AddScoped<AzureBlobService>();
 
 var app = builder.Build();
 
@@ -43,7 +47,7 @@ if (app.Environment.IsDevelopment())
 // Redirect HTTP requests to HTTPS.
 app.UseHttpsRedirection();
 
-// Enable session management before the controllers run.
+// Enable session management.
 app.UseSession();
 
 // Enable authorization.
