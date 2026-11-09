@@ -1,0 +1,121 @@
+﻿@model List<RaceDay.Mvc.ViewModels.EnrolmentViewModel>
+
+@{
+    ViewData["Title"] = "Record Result";
+}
+
+<div class="container mt-4">
+
+    <h1>Record Participant Result</h1>
+
+    <p>Select an enrolled participant and enter their finishing details.</p>
+
+    <hr />
+
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger">
+            @TempData["Error"]
+        </div>
+    }
+
+    @if (ViewBag.Error != null)
+    {
+        <div class="alert alert-danger">
+            @ViewBag.Error
+        </div>
+    }
+
+    @if (Model == null || Model.Count == 0)
+    {
+        <div class="alert alert-info">
+            There are no enrolled participants for this event yet.
+        </div>
+    }
+    else
+    {
+        <form asp-controller="ManageResults"
+              asp-action="Create"
+              method="post">
+
+            @Html.AntiForgeryToken()
+
+            <input type="hidden"
+                   name="eventId"
+                   value="@ViewBag.EventId" />
+
+            <div class="mb-3">
+
+                <label class="form-label">
+                    Participant
+                </label>
+
+                <select name="enrolmentId"
+                        class="form-select"
+                        required>
+
+                    <option value="">Select Participant</option>
+
+                    @foreach (var enrolment in Model)
+                    {
+                        <option value="@enrolment.EnrolmentID">
+                            @enrolment.ParticipantName
+                            - @enrolment.CategoryName
+                            (Enrolment #@enrolment.EnrolmentID)
+                        </option>
+                    }
+
+                </select>
+
+            </div>
+
+            <div class="mb-3">
+
+                <label class="form-label">
+                    Finishing Time
+                </label>
+
+                <input type="text"
+                       name="finishTime"
+                       class="form-control"
+                       placeholder="Example: 01:25:30" />
+
+                <small class="text-muted">
+                    Enter hours:minutes:seconds. This field is optional.
+                </small>
+
+            </div>
+
+            <div class="mb-3">
+
+                <label class="form-label">
+                    Finishing Position
+                </label>
+
+                <input type="number"
+                       name="finishingPosition"
+                       class="form-control"
+                       min="1"
+                       placeholder="Example: 1" />
+
+                <small class="text-muted">
+                    This field is optional.
+                </small>
+
+            </div>
+
+            <button type="submit"
+                    class="btn btn-primary">
+                Save Result
+            </button>
+
+            <a asp-action="Index"
+               asp-route-eventId="@ViewBag.EventId"
+               class="btn btn-secondary">
+                Cancel
+            </a>
+
+        </form>
+    }
+
+</div>

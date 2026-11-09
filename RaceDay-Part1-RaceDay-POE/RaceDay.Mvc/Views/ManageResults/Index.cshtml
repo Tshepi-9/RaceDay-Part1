@@ -1,0 +1,95 @@
+﻿@model List<RaceDay.Mvc.ViewModels.ResultViewModel>
+
+@{
+    ViewData["Title"] = "Manage Results";
+}
+
+<div class="container mt-4">
+
+    <h1>Manage Results</h1>
+
+    <h4>Event: @ViewBag.EventName</h4>
+
+    <hr />
+
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["Success"]
+        </div>
+    }
+
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger">
+            @TempData["Error"]
+        </div>
+    }
+
+    @if (ViewBag.Error != null)
+    {
+        <div class="alert alert-danger">
+            @ViewBag.Error
+        </div>
+    }
+
+    <a asp-action="Create"
+       asp-route-eventId="@ViewBag.EventId"
+       class="btn btn-primary mb-3">
+        Record New Result
+    </a>
+
+    @if (Model == null || Model.Count == 0)
+    {
+        <div class="alert alert-info">
+            No results have been recorded for this event yet.
+        </div>
+    }
+    else
+    {
+        <div class="table-responsive">
+
+            <table class="table table-bordered table-striped">
+
+                <thead>
+                    <tr>
+                        <th>Participant</th>
+                        <th>Finishing Time</th>
+                        <th>Finishing Position</th>
+                        <th>Recorded At</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var result in Model)
+                    {
+                        <tr>
+                            <td>@result.ParticipantName</td>
+
+                            <td>
+                                @(result.FinishTime?.ToString() ?? "Not recorded")
+                            </td>
+
+                            <td>
+                                @(result.FinishingPosition?.ToString() ?? "Not recorded")
+                            </td>
+
+                            <td>
+                                @result.RecordedAt.ToString("dd/MM/yyyy HH:mm")
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+
+            </table>
+
+        </div>
+    }
+
+    <a asp-controller="ManageEvents"
+       asp-action="Index"
+       class="btn btn-secondary">
+        Back to Manage Events
+    </a>
+
+</div>
