@@ -114,5 +114,77 @@ namespace RaceDay.Mvc.Controllers
 
             return RedirectToAction("Index");
         }
+
+        // Upload a profile picture through the API.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> UploadPicture(IFormFile file)
+        {
+            if (!IsLoggedIn())
+                return RedirectToAction("Login", "Auth");
+
+            if (file == null || file.Length == 0)
+            {
+                TempData["ErrorMessage"] =
+                    "Please select a picture to upload.";
+
+                return RedirectToAction("Index");
+            }
+
+            if (file.Length > 5 * 1024 * 1024)
+            {
+                TempData["ErrorMessage"] =
+                    "The picture must not exceed 5 MB.";
+
+                return RedirectToAction("Index");
+            }
+
+            var response = await _apiClient.SendFileAsync(
+                "api/profile/picture",
+                file);
+
+            if (!response.IsSuccessStatusCode)
+            {
+                TempData["ErrorMessage"] =
+                    "Unable to upload the picture. Please try again.";
+
+                return RedirectToAction("Index");
+            }
+
+            TempData["SuccessMessage"] =
+                "Profile picture uploaded successfully.";
+
+            return RedirectToAction("Index");
+        }
+
+        // Display a private profile picture through the MVC application.
+        [HttpGet]
+        public async Task<IActionResult> Picture(string fileName)
+        {
+            if (!IsLoggedIn())
+                return Unauthorized();
+
+            if (string.IsNullOrWhiteSpace(fileName) ||
+                fileName != Path.GetFileName(fileName))
+            {
+                return BadRequest();
+            }
+
+            var response = await _apiClient.SendAsync(
+                HttpMethod.Get,
+                $"api/profile/picture/{Uri.EscapeDataString(fileName)}");
+
+            if (!response.IsSuccessStatusCode)
+                return NotFound();
+
+            var contentType =
+                response.Content.Headers.ContentType?.MediaType
+                ?? "application/octet-stream";
+
+            var imageBytes =
+                await response.Content.ReadAsByteArrayAsync();
+
+            return File(imageBytes, contentType);
+        }
     }
 }
