@@ -1,0 +1,143 @@
+﻿@{
+    ViewData["Title"] = "Participant Dashboard";
+}
+
+<div class="container mt-4">
+
+    <div class="text-center mb-4">
+        <h2>Participant Dashboard</h2>
+
+        <p class="text-muted">
+            Welcome, @Context.Session.GetString("DisplayName")!
+            Manage your event participation from here.
+        </p>
+    </div>
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["SuccessMessage"]
+        </div>
+    }
+
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger">
+            @TempData["ErrorMessage"]
+        </div>
+    }
+
+    <div class="row">
+
+        <!-- Browse Events -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm h-100">
+                <div class="card-body text-center">
+
+                    <h5 class="card-title">Browse Events</h5>
+
+                    <p class="card-text">
+                        Discover upcoming running, walking and cycling events.
+                        Search events and view available categories.
+                    </p>
+
+                    <a asp-controller="BrowseEvents"
+                       asp-action="Index"
+                       class="btn btn-primary">
+                        Browse Events
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- My Events -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm h-100">
+                <div class="card-body text-center">
+
+                    <h5 class="card-title">My Events</h5>
+
+                    <p class="card-text">
+                        View the events you have entered and check your
+                        enrolment status.
+                    </p>
+
+                    <a asp-controller="MyEvents"
+                       asp-action="Index"
+                       class="btn btn-success">
+                        View My Events
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- My Results -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm h-100">
+                <div class="card-body text-center">
+
+                    <h5 class="card-title">My Results</h5>
+
+                    <p class="card-text">
+                        View your recorded event results, finishing times
+                        and positions.
+                    </p>
+
+                    <a asp-controller="MyResults"
+                       asp-action="Index"
+                       class="btn btn-info">
+                        View My Results
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- My Profile -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm h-100">
+                <div class="card-body text-center">
+
+                    <h5 class="card-title">My Profile</h5>
+
+                    <p class="card-text">
+                        View and manage your personal account information.
+                    </p>
+
+                    <a asp-controller="Profile"
+                       asp-action="Index"
+                       class="btn btn-secondary">
+                        Manage Profile
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <hr />
+
+    <div class="d-flex justify-content-between align-items-center mt-3">
+
+        <span class="text-muted">
+            RaceDay Event Management System
+        </span>
+
+        <form asp-controller="Auth"
+              asp-action="Logout"
+              method="post">
+
+            @Html.AntiForgeryToken()
+
+            <button type="submit" class="btn btn-danger">
+                Logout
+            </button>
+
+        </form>
+
+    </div>
+
+</div>

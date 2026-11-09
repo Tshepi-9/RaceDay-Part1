@@ -1,0 +1,153 @@
+﻿@model RaceDay.Mvc.ViewModels.BrowseEventViewModel
+
+@using RaceDay.Mvc.ViewModels
+
+@{
+    ViewData["Title"] = "Event Details";
+
+    var categories =
+        ViewBag.Categories as List<CategoryViewModel>
+        ?? new List<CategoryViewModel>();
+}
+
+<div class="container mt-4">
+
+    <h2 class="mb-3">@Model.EventName</h2>
+
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger">
+            @TempData["ErrorMessage"]
+        </div>
+    }
+
+    @if (ViewBag.Error != null)
+    {
+        <div class="alert alert-danger">
+            @ViewBag.Error
+        </div>
+    }
+
+    <div class="card shadow-sm mb-4">
+
+        <div class="card-body">
+
+            <p>
+                <strong>Description:</strong>
+                @Model.Description
+            </p>
+
+            <p>
+                <strong>Event Date:</strong>
+                @Model.EventDate.ToString("dd MMMM yyyy")
+            </p>
+
+            <p>
+                <strong>Location:</strong>
+                @Model.Location
+            </p>
+
+            <p>
+                <strong>Event Type:</strong>
+                @Model.EventType
+            </p>
+
+            <p>
+                <strong>Distance:</strong>
+                @Model.Distance km
+            </p>
+
+            <p>
+                <strong>Organiser:</strong>
+                @Model.OrganiserName
+            </p>
+
+        </div>
+
+    </div>
+
+    <h4>Available Categories</h4>
+
+    @if (!categories.Any())
+    {
+        <div class="alert alert-info">
+            No categories have been added to this event yet.
+        </div>
+    }
+    else
+    {
+        <div class="card shadow-sm mb-4">
+
+            <div class="card-body">
+
+                <form asp-controller="BrowseEvents"
+                      asp-action="EnterEvent"
+                      method="post">
+
+                    @Html.AntiForgeryToken()
+
+                    <input type="hidden"
+                           name="eventId"
+                           value="@Model.EventID" />
+
+                    <div class="mb-3">
+
+                        <label class="form-label">
+                            Select a category to enter:
+                        </label>
+
+                        <select name="categoryId"
+                                class="form-select"
+                                required>
+
+                            <option value="">
+                                Select Category
+                            </option>
+
+                            @foreach (var category in categories)
+                            {
+                                <option value="@category.CategoryID">
+
+                                    @category.CategoryName
+
+                                    @if (category.CategoryDistance.HasValue)
+                                    {
+                                        <text> - @category.CategoryDistance km</text>
+                                    }
+
+                                    @if (category.MinimumAge.HasValue ||
+                                         category.MaximumAge.HasValue)
+                                    {
+                                        <text>
+                                            (Age:
+                                            @(category.MinimumAge?.ToString() ?? "Any")
+                                            -
+                                            @(category.MaximumAge?.ToString() ?? "Any"))
+                                        </text>
+                                    }
+
+                                </option>
+                            }
+
+                        </select>
+
+                    </div>
+
+                    <button type="submit" class="btn btn-success">
+                        Enter Event
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+    }
+
+    <a asp-controller="BrowseEvents"
+       asp-action="Index"
+       class="btn btn-secondary">
+        Back to Events
+    </a>
+
+</div>
