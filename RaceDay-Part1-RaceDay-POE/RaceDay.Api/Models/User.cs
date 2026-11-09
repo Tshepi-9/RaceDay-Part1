@@ -33,6 +33,9 @@ namespace RaceDay.Api.Models
         [MaxLength(20)]
         public string? Phone { get; set; }
 
+        [MaxLength(500)]
+        public string? ProfilePictureUrl { get; set; }
+
         public ICollection<Event> OrganisedEvents { get; set; }
             = new List<Event>();
 
